@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_proizvodi">
+
+    <fragment
+        android:id="@+id/nav_proizvodi"
+        android:name="com.example.istv_andorid.ui.products.ProductFragment"
+        android:label="@string/menu_proizvodi"
+        tools:layout="@layout/fragment_product" />
+
+    <!--<fragment
+        android:id="@+id/nav_korisnici"
+        android:name="rs.grooming.android.ui.korisnici.KorisniciFragment"
+        android:label="@string/menu_korisnici"
+        tools:layout="@layout/fragment_korisnici" />
+
+    <fragment
+        android:id="@+id/nav_cenovnik"
+        android:name="rs.grooming.android.ui.cenovnik.CenovnikFragment"
+        android:label="@string/menu_cenovnik"
+        tools:layout="@layout/fragment_cenovnik" />
+
+    <fragment
+        android:id="@+id/nav_podesavanja"
+        android:name="rs.grooming.android.ui.podesavanja.PodesavanjaFragment"
+        android:label="@string/menu_podesavanja"
+        tools:layout="@layout/fragment_podesavanja" />-->
+</navigation>

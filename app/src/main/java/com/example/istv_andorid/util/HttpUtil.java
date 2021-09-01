@@ -1,5 +1,7 @@
 package com.example.istv_andorid.util;
 
+import android.util.Log;
+
 import org.json.JSONException;
 
 import org.json.JSONException;
@@ -17,7 +19,7 @@ import info.guardianproject.netcipher.NetCipher;
 
 public class HttpUtil {
 
-    static final String BACKEND_URL = "http://127.0.0.1:8080/";
+    static final String BACKEND_URL = "http://192.168.0.13:8080/istv/";
     static final String SECURITY_HEADER = "Authorization";
     static final String SECURITY_PREFIX = "Bearer ";
 
@@ -36,6 +38,8 @@ public class HttpUtil {
 
             urlConnection.getOutputStream().write(body.getBytes(StandardCharsets.UTF_8));
 
+            Log.i("REsponse code: ", urlConnection.getResponseCode() + "");
+
             if (urlConnection.getResponseCode() == 401) {
                 throw new JSONException("");
             } else if (urlConnection.getResponseCode() == 400) {
@@ -53,7 +57,6 @@ public class HttpUtil {
                     sb.append((char) c);
                 }
             }
-
             return sb.toString();
         } finally {
             urlConnection.disconnect();

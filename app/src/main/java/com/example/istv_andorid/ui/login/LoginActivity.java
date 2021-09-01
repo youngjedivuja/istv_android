@@ -10,6 +10,7 @@ import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         checkAuthenticated();
 
         super.onCreate(savedInstanceState);
@@ -150,20 +152,24 @@ public class LoginActivity extends AppCompatActivity {
                 body.put("username", params[0]);
                 body.put("password", params[1]);
 
-                JSONObject response = new JSONObject(HttpUtil.doPost("auth/login", body.toString(), null));
 
-                LoggedInUser user = new LoggedInUser(response.getString("token"), params[0]);
+                JSONObject response = new JSONObject(HttpUtil.doPost("login", body.toString(), null));
+
+
+                LoggedInUser user = new LoggedInUser(response.getString("value"), params[0]);
 
                 result = new LoginResult(new LoggedInUserView(params[0]));
 
                 SharedPreferencesUtil.saveString(context, "jwt", user.getToken());
                 SharedPreferencesUtil.saveString(context, "username", user.getUsername());
             } catch (JSONException e) {
+                e.printStackTrace();
                 result = new LoginResult("Netačni korisnički podaci");
             } catch (Exception e) {
                 e.printStackTrace();
                 result = new LoginResult("Greška prilikom logovanja");
             }
+            Log.i("result: ", result+"");
             return result;
         }
     }

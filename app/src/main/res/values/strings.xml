@@ -14,8 +14,14 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_desc">Navigation header</string>
 
-    <string name="menu_termini">Termini</string>
+
+    <string name="menu_products">Proizvodi</string>
     <string name="menu_korisnici">Korisnici</string>
     <string name="menu_cenovnik">Cenovnik</string>
     <string name="menu_podesavanja">Podešavanja</string>
+
+
+    <string name="dodaj_stavku">Dodaj stavku</string>
+    <string name="menu_proizvodi">Proizvodi</string>
+    <string name="menu_logout">Logout</string>
 </resources>
