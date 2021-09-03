@@ -24,4 +24,9 @@
     <string name="dodaj_stavku">Dodaj stavku</string>
     <string name="menu_proizvodi">Proizvodi</string>
     <string name="menu_logout">Logout</string>
+    <string name="product_code">Šifra proizvoda</string>
+    <string name="product_name">Naziv proizvoda</string>
+    <string name="product_price">Cena proizvoda</string>
+    <string name="product_quantity">Na lageru</string>
+    <string name="sacuvaj">Sačuvaj</string>
 </resources>

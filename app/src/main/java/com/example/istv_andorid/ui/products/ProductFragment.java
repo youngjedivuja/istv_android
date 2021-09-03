@@ -46,12 +46,12 @@ public class ProductFragment extends Fragment {
 
         addButton = root.findViewById(R.id.addButton);
 
-        /*addButton.setOnClickListener(new View.OnClickListener() {
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), CenovnikFormActivity.class));
+                startActivity(new Intent(getContext(), ProductFormActivity.class));
             }
-        });*/
+        });
 
         updateList();
 
@@ -87,10 +87,10 @@ public class ProductFragment extends Fragment {
                 ObjectMapper mapper = new ObjectMapper();
                 CollectionType collectionType = mapper.getTypeFactory()
                         .constructCollectionType(List.class, Product.class);
-                InputStream response = HttpUtil.doGet("products/",
+                InputStream response = HttpUtil.doGet("products",
                         SharedPreferencesUtil.getSavedString(context, "jwt"));
                 list = mapper.readValue(response, collectionType);
-                System.err.println("ABD " + list);
+                Log.i("Lista: ", "" + list);
                 response.close();
             } catch (Exception e) {
                 e.printStackTrace();

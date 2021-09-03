@@ -48,4 +48,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
     implementation 'info.guardianproject.netcipher:netcipher:1.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4'
 }

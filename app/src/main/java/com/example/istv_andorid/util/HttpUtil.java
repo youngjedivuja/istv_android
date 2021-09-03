@@ -75,6 +75,9 @@ public class HttpUtil {
             urlConnection.setRequestProperty(SECURITY_HEADER, SECURITY_PREFIX + token);
         }
 
+        Log.i("Response code: " , "" + urlConnection.getResponseCode());
+        Log.i("Response code: " , "" + url);
+
         if (urlConnection.getResponseCode() != 200) {
             throw new Exception("");
         }
