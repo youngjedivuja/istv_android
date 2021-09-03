@@ -1,12 +1,14 @@
 package com.example.istv_andorid.ui.products;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.istv_andorid.R;
 import com.example.istv_andorid.util.HttpUtil;
@@ -16,6 +18,8 @@ import org.json.JSONObject;
 
 public class ProductFormActivity extends AppCompatActivity {
     private Integer productId;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class ProductFormActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             productId = bundle.getInt("product_id");
+            Log.i("bundle: " , "" + bundle);
             editCode.setText(bundle.getString("product_code"));
             editName.setText(bundle.getString("product_name"));
             editPrice.setText(bundle.getString("product_price"));
@@ -76,12 +81,16 @@ public class ProductFormActivity extends AppCompatActivity {
 
                         if (productId == null) {
                             HttpUtil.doPost("products/", json.toString(), SharedPreferencesUtil.getSavedString(getApplicationContext(), "jwt"));
+
                         } else {
                             json.put("productId", productId);
                             HttpUtil.doPut("products/", json.toString(), SharedPreferencesUtil.getSavedString(getApplicationContext(), "jwt"));
-                        }
 
+                        }
+                        Toast.makeText(getApplicationContext(), "Uspešno sačuvano", Toast.LENGTH_SHORT).show();
+                        Log.i("Info", "Info");
                         finish();
+
 
                     }catch (Exception e){
                         e.printStackTrace();
@@ -91,6 +100,7 @@ public class ProductFormActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 }

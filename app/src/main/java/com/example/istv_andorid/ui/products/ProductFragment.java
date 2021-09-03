@@ -90,7 +90,6 @@ public class ProductFragment extends Fragment {
                 InputStream response = HttpUtil.doGet("products",
                         SharedPreferencesUtil.getSavedString(context, "jwt"));
                 list = mapper.readValue(response, collectionType);
-                Log.i("Lista: ", "" + list);
                 response.close();
             } catch (Exception e) {
                 e.printStackTrace();

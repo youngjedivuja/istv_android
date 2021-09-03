@@ -95,6 +95,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                     bundle.putInt("product_id", product.getId());
                     bundle.putString("product_name", product.getFullName());
                     bundle.putString("product_price", product.getPrice());
+                    bundle.putString("product_code", product.getProductCode());
+                    bundle.putString("product_quantity", product.getStorageQuantity());
                     intent.putExtras(bundle);
                     context.startActivity(intent);
                 }

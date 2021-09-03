@@ -1,6 +1,6 @@
 package com.example.istv_andorid.data.model;
 
-public class Product extends Auditable{
+public class Product {
     private Integer id;
     private String productCode;
     private String fullName;
