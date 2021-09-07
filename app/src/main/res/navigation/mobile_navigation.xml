@@ -11,9 +11,15 @@
         android:label="@string/menu_proizvodi"
         tools:layout="@layout/fragment_product" />
 
+    <fragment
+        android:id="@+id/nav_kupci"
+        android:name="com.example.istv_andorid.ui.buyers.BuyerFragment"
+        android:label="@string/menu_kupci"
+        tools:layout="@layout/fragment_buyer" />
+
     <!--<fragment
         android:id="@+id/nav_korisnici"
-        android:name="rs.grooming.android.ui.korisnici.KorisniciFragment"
+        android:name="com.example.istv_andorid.ui.products.OrderFragment"
         android:label="@string/menu_korisnici"
         tools:layout="@layout/fragment_korisnici" />
 

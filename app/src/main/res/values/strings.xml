@@ -29,4 +29,7 @@
     <string name="product_price">Cena proizvoda</string>
     <string name="product_quantity">Na lageru</string>
     <string name="sacuvaj">Sačuvaj</string>
+    <string name="menu_orders">Porudžbine</string>
+    <string name="buyer_name">Ime kupca</string>
+    <string name="menu_kupci">Kupci</string>
 </resources>
