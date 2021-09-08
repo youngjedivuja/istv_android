@@ -17,21 +17,9 @@
         android:label="@string/menu_kupci"
         tools:layout="@layout/fragment_buyer" />
 
-    <!--<fragment
-        android:id="@+id/nav_korisnici"
-        android:name="com.example.istv_andorid.ui.products.OrderFragment"
-        android:label="@string/menu_korisnici"
-        tools:layout="@layout/fragment_korisnici" />
-
     <fragment
-        android:id="@+id/nav_cenovnik"
-        android:name="rs.grooming.android.ui.cenovnik.CenovnikFragment"
-        android:label="@string/menu_cenovnik"
-        tools:layout="@layout/fragment_cenovnik" />
-
-    <fragment
-        android:id="@+id/nav_podesavanja"
-        android:name="rs.grooming.android.ui.podesavanja.PodesavanjaFragment"
-        android:label="@string/menu_podesavanja"
-        tools:layout="@layout/fragment_podesavanja" />-->
+        android:id="@+id/nav_orders"
+        android:name="com.example.istv_andorid.ui.orders.OrdersFragment"
+        android:label="@string/menu_orders"
+        tools:layout="@layout/fragment_order" />
 </navigation>

@@ -35,4 +35,8 @@
     <string name="buyer_surname">Prezime</string>
     <string name="buyer_company">Firma</string>
     <string name="buyer_city">Grad</string>
+    <string name="order_status">Status porudžbine</string>
+    <string name="order_deliveryAddress">Adresa dostave</string>
+    <string name="order_company">Naziv kompanije kupca</string>
+    <string name="order_price">Cena</string>
 </resources>

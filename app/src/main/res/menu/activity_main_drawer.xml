@@ -6,13 +6,18 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_proizvodi"
-            android:icon="@drawable/ic_products"
+            android:icon="@drawable/ic_product"
             android:title="@string/menu_products" />
 
         <item
             android:id="@+id/nav_kupci"
-            android:icon="@drawable/ic_orders"
+            android:icon="@drawable/ic_korisnici"
             android:title="@string/menu_kupci" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_orders"
+            android:title="@string/menu_orders" />
 
         <item
             android:id="@+id/nav_logout"
