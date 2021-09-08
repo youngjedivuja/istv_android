@@ -32,4 +32,7 @@
     <string name="menu_orders">Porudžbine</string>
     <string name="buyer_name">Ime kupca</string>
     <string name="menu_kupci">Kupci</string>
+    <string name="buyer_surname">Prezime</string>
+    <string name="buyer_company">Firma</string>
+    <string name="buyer_city">Grad</string>
 </resources>

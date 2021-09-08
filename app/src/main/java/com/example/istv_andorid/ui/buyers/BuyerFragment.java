@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,6 +82,7 @@ public class BuyerFragment extends Fragment {
                 e.printStackTrace();
                 Toast.makeText(context, "Došlo je do greške!", Toast.LENGTH_LONG).show();
             }
+            Log.i("SIZE: " , list.size() + "");
             return list;
         }
     }

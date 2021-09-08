@@ -32,7 +32,7 @@ public class BuyerFormActivity extends AppCompatActivity {
         if (bundle != null) {
             buyerId = bundle.getInt("buyer_id");
             Log.i("bundle: " , "" + bundle);
-            editName.setText(bundle.getString("buyer_code"));
+            editName.setText(bundle.getString("buyer_name"));
             editSurname.setText(bundle.getString("buyer_surname"));
             editCompanyName.setText(bundle.getString("buyer_companyName"));
             editCity.setText(bundle.getString("buyer_city"));
